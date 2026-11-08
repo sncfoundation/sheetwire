@@ -9,7 +9,9 @@ A <a href="https://sncfoundation.github.io">Sheet-Native Computing Foundation</a
 
 ---
 
-**Status:** 📝 Unsaved Draft (design). Data & Storage TAG.
+**Status:** 📝 Unsaved Draft &#183; **design only**. Data & Storage TAG. This repository holds the design below and no code: no wire-protocol gateway exists yet, so `psql` will not connect to your Sheet today. Implementation is tracked in [sncfoundation/sheeternetes#50](https://github.com/sncfoundation/sheeternetes/issues/50).
+
+The name already ships elsewhere, though: [`sheetwire.py`](https://github.com/sncfoundation/sheeternetes-onprem/blob/main/sheetwire.py) in [sheeternetes-onprem](https://github.com/sncfoundation/sheeternetes-onprem#cross-substrate-networking-sheetwire) is a working TCP relay that uses a shared Sheet as the wire between two clusters behind NAT. That is where SheetWire code lives today; the database-protocol gateway described here would grow on top of it.
 
 ## The mapping
 
@@ -22,7 +24,7 @@ Bounded by Sheets latency & quotas; a translation layer, not a storage engine. T
 
 ## Connect with real clients
 
-Paired with [SheetWire](https://github.com/sncfoundation/sheetwire), real Postgres/Redis/Mongo wire protocols clients can connect to a Google Sheet over the native wire protocol.
+Once this gateway exists, real Postgres, MySQL, Redis and MongoDB clients will be able to connect to a Google Sheet over their native wire protocols. Not before.
 
 - 🗺️ [SNCF Landscape](https://sncfoundation.github.io/landscape.html) · 🧩 [Projects](https://sncfoundation.github.io/projects.html) · 🎓 [Certification](https://sncfoundation.github.io/certification.html)
 
